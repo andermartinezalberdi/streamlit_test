@@ -1,12 +1,11 @@
 import streamlit as st
-import random
 
-st.title("Simulador de tirada de moneda")
+st.header('Lanzar una moneda')
 
-st.write("Haz clic en el botón para tirar la moneda:")
+number_of_trials = st.slider('¿Número de intentos?', 1, 1000, 10)
+start_button = st.button('Ejecutar')
 
-if st.button("Tirar moneda"):
-    resultado = random.choice(["Cara", "Cruz"])
-    st.write(f"Resultado: **{resultado}**")
-else:
-    st.write("Aún no has tirado la moneda.")
+if start_button:
+    st.write(f'Experimento con {number_of_trials} intentos en curso.')
+
+st.write('Esta aplicación aún no es funcional. En construcción.')
